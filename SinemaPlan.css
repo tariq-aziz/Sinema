@@ -1,0 +1,491 @@
+@charset "UTF-8";
+html{
+	height:100%;
+	
+}
+header{
+
+}
+
+form{
+	margin:0px 0px 8px 0px;
+}
+
+h2{
+	margin:0px 10px;
+}
+body{
+	background-color:black;
+	height:100%;
+}
+
+.backgroundImage{
+
+  min-height: 100%;
+
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: absolute;
+  top: 0;
+  left: 0;
+	background-image: url('images/signinBackground.jpg');
+	background-size: cover;
+	-webkit-filter: blur(5px);     
+    filter: blur(5px); 
+
+	z-index: -1;
+}
+
+
+#logContainer{
+	z-index:1;
+}
+#signinLogo{
+	
+	display:block;
+	float:right;
+	
+
+	z-index: 2;
+}
+
+#signinContainer{
+	float:right;
+	clear:both;
+	width: 300px;
+	height: 200px;
+	padding:0px;
+
+	margin-right:25px;
+	z-index: 2;
+
+}
+
+.formPrompt{
+	margin:5px 0;
+	font-size: 18px;
+	z-index: 2;
+}
+
+.loginForm input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: white;
+	font-family: 'Exo', sans-serif;	
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	z-index: 2;
+}
+
+.loginForm input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+
+}
+
+.loginForm input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: white;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+	z-index: 2;
+}
+
+.loginForm input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+
+}
+
+.loginForm input[type=submit]{
+	width: 260px;
+	height: 35px;
+	background: #8D1919;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.loginForm input[type=submit]:hover{
+	opacity: 0.8;
+}
+
+.loginForm input[type=submit]:active{
+	opacity: 0.6;
+}
+
+#signUpPrompt{
+	margin-bottom: 0px;
+	margin-top:50px;
+}
+
+
+.slider{
+	display:block;
+	background-color:#000000;
+	margin:0px;
+	
+}
+
+
+
+.slickSlide{
+	height:320px;
+	margin: 10px;
+}
+
+
+#container{
+	width: 80%;
+	margin: 0px auto;
+	background-color:#706D6E;
+	clear:both;
+
+}
+
+#logoLink{
+	width: 100px;
+}
+
+
+#logo{
+	height:50px;
+	overflow: auto;
+	float:left;
+	margin:0px 0px 0px 50px;
+}
+
+#mainNav{
+	background-color:#661A00;
+	display: inline-block;
+	width:100%;
+	overflow:auto;
+}
+#mainNav ul {
+	float:right;
+	list-style-type: none;
+	background-color:#661A00;
+	margin: 0px 50px 0px 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+#mainNav li{
+	display: inline-block;
+	text-align:center;
+	margin-right:-4px;
+}
+
+.changeColor{
+	margin-top: 5px;
+	padding:7px;
+	display:block;
+	text-decoration: none;
+	color:grey;
+	font-size: 20px;
+	font-weight: lighter;
+	transition:0.3s background-color;
+}
+#mainNav li img{
+	vertical-align:middle;
+}
+
+#mainNav a:hover{
+	background-color:black;
+}
+
+
+input[type="text"]{
+	margin:5px 0px 0px 0px;
+	width:200px;
+	font-size:16px;
+	border:1px solid;
+}
+
+input[type="submit"]{
+	display:inline-block;
+	margin:0px 0px 0px 0px;
+	border:1px solid;
+}
+
+#tabs{
+	font-size: 18px;
+	
+	margin: 25px;
+}
+
+#tabs ul{
+	border:solid 2px;
+	background:#661A00;	
+
+	list-style-type: none;
+	text-align: center;
+	margin:0px auto;
+	display:block;
+
+}
+
+#tabs li{
+	
+	display:inline-block;
+	margin-right:5px;
+	padding:0px;
+}
+
+#tabs a{
+	text-decoration: none;
+	color: #FFFFFF;
+	border: 1px solid #a1a11;
+	transition: 0.5s color;
+}
+
+#tabs a:hover{
+	color:black;
+	
+}
+
+#tabsContent{
+	margin:10px auto;
+}
+#tabsContent td{
+	background:#707070;
+	width:200px;
+	height:300px;
+}
+
+#tabsContent img{
+	width:200px;
+	height:280px;
+	display:block;
+}
+
+.posterRating{
+	margin:4px;
+	background:#444;
+}
+
+#totalDetails{
+	border:solid 2px;
+	width:100%;
+	height:600px;
+	overflow: auto;
+
+}
+
+#moviePoster{
+	float:left;
+	display: block;
+	border:solid 1px;
+	width:20%;
+	height:100%;
+	margin-right:10px;
+}
+
+#moviePoster img{
+	width:100%;
+	height: 50%;
+}
+
+#movieInfo{
+	height:100%;
+	border-right:1px solid;
+	overflow: hidden;
+}
+
+#movieIntro{
+	border-bottom: solid 1px;
+	border-color:#ADADAD;	
+}
+
+#movieIntro ul{
+	text-align: center;
+	margin:3px 0px 8px 0px;
+}
+#movieIntro li{
+	display: inline-block;
+	padding-right:5px;
+	padding-left:5px;
+	border-right:solid 1px;
+
+}
+#movieTitle{
+	text-align: center;
+}
+
+
+#movieRatings{
+	border-bottom: solid 1px;
+	border-color:#ADADAD;
+	overflow: auto;
+	padding:20px;
+}
+
+#avgRating{
+	display: inline;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+#userRatingText{
+	padding: 0px;
+	margin-left:100px;
+	text-align: center;
+	float:left;
+
+	display: inline;
+}
+
+#userRatingStars{
+	display: inline;
+}
+
+#userRatingStars li{
+
+	float:left;
+	list-style-type: none;
+	
+}
+
+
+#movieDescrip{
+	margin-top:5px;
+	border-bottom: solid 1px;
+	border-color:#ADADAD;
+}
+
+#crew{
+	border-bottom: solid 1px;
+	border-color:#ADADAD;
+	padding:0px;
+	margin:0px;
+}
+#trailer{
+	float:left;
+}
+
+#similarMovies{
+	margin-left:10px;
+	border: solid 1px;
+	overflow: hidden;
+	height:300px;
+}
+
+#similarMovies h4{
+	text-align: center;
+}
+
+#similarHead{
+	margin:7px 0 0 0 ;
+	padding:0px;
+}
+
+#similarContent img{
+	width:100px;
+	height:150px;
+}
+
+.similarSlider{
+display:block;	
+	background-color:#000000;
+	margin:10px;
+	height:150px;
+	width:470px;
+}
+
+.similarImage{
+	height:150px;
+	margin: 0px;
+}
+
+.recommended{
+	height:200px;
+	border: 1px solid;
+	margin-top:10px;
+	background-color: #989498;
+}
+
+.recommPosterLink{
+	text-decoration: none;
+	color: black;
+	height:100%;
+	width:15%;	
+	border: 1px solid;
+	float:left;
+
+}
+.recommPoster{
+	height:100%;
+	width:100%;	
+
+}
+
+.recommInfo{
+	border:1px solid;
+	overflow: hidden;
+	text-align: center;
+	height:20%;
+}
+
+.recommTitleLink{
+	text-decoration: none;
+	color:black;
+}
+
+.recommTitleLink:hover{
+	color:grey;
+}
+
+
+.recommTitle{
+	float:left;
+	text-align: center;
+}
+
+.recommRating{
+	float:right;
+}
+
+
+.leftInfoRecomm{
+	float:left;
+	padding-left: 20px;
+	padding-right: 10px;
+	border-right: solid 1px;
+	border-left: solid 1px;
+	overflow: hidden;
+	width:30%;
+	height:80%;
+}
+
+.rightInfoRecomm{
+	overflow: hidden;	
+	float: right;
+	margin-right: 20px;
+	width: 45%;
+	height: 80%;
+	text-align: justify;
+}
+
+
