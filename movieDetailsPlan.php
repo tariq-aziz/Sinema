@@ -7,8 +7,8 @@ $_SESSION['title'] = $movie;
 
 $user = $_SESSION['username'];
 
-//include("connectServer.php");
-include("connectLocal.php");
+include ("/home3/tariqaziz/private/connectServer.php");
+//include("connectLocal.php");
 
 
 	$ini_array = parse_ini_file("moviedata.ini");	
