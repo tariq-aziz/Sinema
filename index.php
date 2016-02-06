@@ -5,9 +5,9 @@ if (!isset($_SESSION['username'])){
   header("location: signin.php");
   exit();
 }
+include ("/home3/tariqaziz/private/connectServer.php");
 
-//include("connectServer.php");
-include("connectLocal.php");
+//include("connectLocal.php");
   
   $ini_array = parse_ini_file("moviedata.ini");
 
@@ -50,7 +50,7 @@ include("connectLocal.php");
 
 <?php
   $spotlightQuery = "SELECT DISTINCT title from movies WHERE release_date BETWEEN 
-                        DATE_SUB(CURDATE(),INTERVAL 1 MONTH) AND CURDATE()";
+                        DATE_SUB(CURDATE(),INTERVAL 3 MONTH) AND CURDATE()";
   $spotlightResults = mysqli_query($connection,$spotlightQuery );
   
   while($spotlightRow = mysqli_fetch_array($spotlightResults)){
