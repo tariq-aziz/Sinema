@@ -105,11 +105,11 @@ for($i=0; $i<sizeof($genresAllArray); $i++){
 
 
 			echo "<div class='recommended'>";
-			echo "<a class='recommPosterLink' href='movieDetailsPlan.php?movie=$title'> 
+			echo "<a class='recommPosterLink' href='movieDetails.php?movie=$title'> 
 				<img class='recommPoster' src='$imgSource' alt='sorry'> </a>";
 
 			echo "<div class='recommInfo'>";
-			echo "<a class='recommTitleLink' href='movieDetailsPlan.php?movie=$title'><h2 class='recommTitle'>$title</h2> </a>";
+			echo "<a class='recommTitleLink' href='movieDetails.php?movie=$title'><h2 class='recommTitle'>$title</h2> </a>";
 			echo "<h2 class='recommRating'>$avgRating%</h2>";
 		
 			echo "</div>";
