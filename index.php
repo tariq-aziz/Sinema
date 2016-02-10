@@ -59,7 +59,7 @@ include ("/home3/tariqaziz/private/connectServer.php");
     $spotlightInfo = "hello";
     $spotlightImg = $ini_array["$spotlightTitle". ".image.url"]; 
     $fixedImgURL = addslashes($spotlightImg);
-    echo "<div> <a href='movieDetailsPlan.php?movie=".$spotlightTitle."'> 
+    echo "<div> <a href='movieDetails.php?movie=".$spotlightTitle."'> 
           <img class='slickSlide' src='$fixedImgURL' alt='$spotlightTitle'> </a></div>";
   }                    
 ?>
