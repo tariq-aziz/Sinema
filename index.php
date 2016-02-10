@@ -21,7 +21,7 @@ include ("/home3/tariqaziz/private/connectServer.php");
 <title>Sinema</title>
 <link rel="SHORTCUT ICON" type="image/x-icon" href="images/Sinema.ico" />
 
-<link href="SinemaPlan.css" rel="stylesheet" type="text/css">
+<link href="Sinema.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.css">
 
 
