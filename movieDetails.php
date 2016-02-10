@@ -92,7 +92,7 @@ include ("/home3/tariqaziz/private/connectServer.php");
 
 <head>
 <title><?php echo $movie ?></title>
-<link href="SinemaPlan.css" rel="stylesheet" type="text/css">
+<link href="Sinema.css" rel="stylesheet" type="text/css">
 <link rel="SHORTCUT ICON" type="image/x-icon" href="images/Sinema.ico" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.css">
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
