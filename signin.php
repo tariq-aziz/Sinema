@@ -58,13 +58,11 @@
     	}
 	}
 
-
+//user is loggin in 
 if(isset($_POST["submitSignin"]) && validEntry($_POST["usernameSignin"]) && validEntry($_POST["passwordSignin"])){
 	$username = $_POST["usernameSignin"];
 	$password = $_POST["passwordSignin"];
 	
-	
-	$incorrect = false;
 	
 	//include("connectServer.php");
 	include("connectLocal.php");
@@ -81,7 +79,6 @@ if(isset($_POST["submitSignin"]) && validEntry($_POST["usernameSignin"]) && vali
 	
 	
 	if($count>0){	
-
 		session_start();
 		$_SESSION['username'] = $username;
 		
@@ -91,27 +88,15 @@ if(isset($_POST["submitSignin"]) && validEntry($_POST["usernameSignin"]) && vali
 	
 	
 	else{
-		//its using empty forms and showing no match, therefore alerting
-		//THIS IS CORRECT REASON because the .php GETS whenever it is called (ie when the
-		//.html first calls it when the form is submitted, and here after alert as well)
-		//READ TOP COMMENT if combining .html file
-		
 		echo "<script> alert('Incorrect username or password'); 
-			   window.location = 'signin.php'; </script>";
-			   
-			   //MAKE SURE USER ENTERRED SOMETHING, OTHERWISE CAN SIGNUP & LOG IN WITH
-			   //NO VALUES FOR USERNAME OR PASSWORD.
-		
+			   window.location = 'signin.php'; </script>";\
 		
 	}	
 
 }
-
+	//user is signing up
 	if(isset($_POST["submitSignup"]) && validEntry($_POST["usernameSignup"]) && validEntry($_POST["passwordSignup"])){
 		session_start();
-
-		//$file = fopen("movieTitles.txt", "r") or die("Unable to read file!");
-		//$file = fopen("dataImport.txt", "r") or die("Unable to read dataImport file");
 	
 		$username = $_POST["usernameSignup"];
 		$password = $_POST["passwordSignup"];
@@ -132,7 +117,6 @@ if(isset($_POST["submitSignin"]) && validEntry($_POST["usernameSignin"]) && vali
 		else{
 			$sql = "INSERT INTO login (username, password) 
 				VALUES('$username', '$password')";
-			//$temp = " ";
 			
 			$movieSQL = "SELECT DISTINCT title FROM movies";
 			$movieSQLResult = mysqli_query($connection, $movieSQL);
@@ -144,21 +128,6 @@ if(isset($_POST["submitSignin"]) && validEntry($_POST["usernameSignin"]) && vali
 				mysqli_query($connection, $userMovieSQL);
 
 			}
-
-			/*
-			while($line = trim(fgets($file))){
-				list($title, $genre, $director, $star_1,$star_2,$star3,$date) = explode(";", $line);
-				//don't insert the same title twice into new_users 
-				if($title!=$temp){
-					$movieUpdateQuery = "INSERT INTO users (username, movie_title) 
-						VALUES ('$username', '$title')";
-					mysqli_query($connection, $movieUpdateQuery);
-				}
-				//use temp to test if the next line is the same movie with different genre 
-				//(don't insert if that is the case)
-				$temp = $title;
-			}
-			*/
 
 		
 			if(mysqli_query($connection, $sql)){
