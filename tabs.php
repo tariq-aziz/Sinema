@@ -30,7 +30,7 @@
 					$imgSource = $ini_array["$fileSearch"];
 					   $fixedImgURL = addslashes($spotlightImg);
 		
-					echo "<td> <a href='movieDetailsPlan.php?movie=".$row['title']."'> 
+					echo "<td> <a href='movieDetails.php?movie=".$row['title']."'> 
 							<img class='posterImg' src='$imgSource' alt='$imgSource'>";
 
 					//obtain and display the average rating of the movie
