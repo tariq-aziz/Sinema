@@ -7,7 +7,7 @@
 <html>
 <head>
 <title>Sinema</title>
-<link href="SinemaPlan.css" rel="stylesheet" type="text/css">
+<link href="Sinema.css" rel="stylesheet" type="text/css">
 <link rel="SHORTCUT ICON" type="image/x-icon" href="images/Sinema.ico" />
 </head>
 
