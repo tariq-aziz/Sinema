@@ -6,11 +6,6 @@ $genreArray = array();
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-//curl_setopt($curl, CURLOPT_URL,'http://api.themoviedb.org/3/configuration?api_key=62a08828f7e30429c49acf8a0a69c23d');
-//$imageConfig = curl_exec($curl);
-//echo $imageConfig . "<br><br>";
-//$imageConfigDecoded = json_decode($imageConfig);
-//$imageBase = $imageConfig = 
 
 curl_setopt($curl, CURLOPT_URL,'http://api.themoviedb.org/3/genre/movie/list?api_key=62a08828f7e30429c49acf8a0a69c23d');
 $genreIndex = curl_exec($curl);
@@ -24,20 +19,18 @@ foreach($genreIndexDecoded['genres'] as $genre){
 	$genreArray["$genreID"] = $genreName;
 }
 
-//$allResultsDecoded = array();
+
 //can just change the page # whenever you want to add movies to db/file. For db, check if movie is already there before adding.
-//for($i=1; $i<=5; $i++){
-	curl_setopt($curl, CURLOPT_URL,"https://api.themoviedb.org/3/discover/movie?page=5&api_key=62a08828f7e30429c49acf8a0a69c23d&language=en&sortby=popularity.desc");
-	$resultPopular = curl_exec($curl); 
-	$resultPopularDecoded = json_decode($resultPopular, true);
-	//$allResultsDecoded[] = $resultPopularDecoded;
-//}
+
+curl_setopt($curl, CURLOPT_URL,"https://api.themoviedb.org/3/discover/movie?page=5&api_key=62a08828f7e30429c49acf8a0a69c23d&language=en&sortby=popularity.desc");
+$resultPopular = curl_exec($curl); 
+$resultPopularDecoded = json_decode($resultPopular, true);
+	
 
 
 $file = fopen("moviedata.ini", "a") or die("Unable to open file");
 //cannot do all pages together since there is a limit of 40 request/10 secs (this program cannot add >40 movies per execution )
-//foreach($allResultsDecoded as $movieResults){
-//echo "NEW PAGE <br><br><br>";
+
 foreach($resultPopularDecoded['results'] as $movie){
 
 	$title = $movie['title'];
@@ -121,8 +114,7 @@ foreach($resultPopularDecoded['results'] as $movie){
 
 	foreach($indivMovieDecoded['genres'] as $genre){
 		$genreName = $genre['name'];
-		//this check is somewhat unnecessary (will never come to repition of title and genre, could just add all without the check)
-		//NVM, this CHECK IS MANDATORY since you don't want to add the same movie to to the database twice
+	
 		$movieCheck = "SELECT * FROM movies WHERE title='$title' AND genre='$genreName'";
 		$resultMovieCheck = mysqli_query($connection, $movieCheck);
 		$numMovieRows = mysqli_num_rows($resultMovieCheck);
