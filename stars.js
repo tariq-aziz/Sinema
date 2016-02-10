@@ -1,5 +1,10 @@
 function rate(y){
 	var x = new XMLHttpRequest();
+	/* GET method - need to change rate.php to use GET instead of POST
+	x.open("GET", "rate.php?rating="+y, true);
+	x.send();
+	*/
+	
 	x.open("POST", "rate.php", true);
 	x.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	x.send("rating=" + y);
