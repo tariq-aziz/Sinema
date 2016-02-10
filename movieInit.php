@@ -6,20 +6,6 @@ $genreArray = array();
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-
-curl_setopt($curl, CURLOPT_URL,'http://api.themoviedb.org/3/genre/movie/list?api_key=62a08828f7e30429c49acf8a0a69c23d');
-$genreIndex = curl_exec($curl);
-$genreIndexDecoded = json_decode($genreIndex, true);
-
-
-foreach($genreIndexDecoded['genres'] as $genre){
-
-	$genreName = $genre['name'];
-	$genreID = $genre['id'];
-	$genreArray["$genreID"] = $genreName;
-}
-
-
 //can just change the page # whenever you want to add movies to db/file. For db, check if movie is already there before adding.
 
 curl_setopt($curl, CURLOPT_URL,"https://api.themoviedb.org/3/discover/movie?page=5&api_key=62a08828f7e30429c49acf8a0a69c23d&language=en&sortby=popularity.desc");
