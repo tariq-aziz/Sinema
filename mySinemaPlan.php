@@ -72,7 +72,7 @@ for($i=0; $i<sizeof($genresAllArray); $i++){
 
 <head>
 <title>mySinema</title>
-<link href="SinemaPlan.css" rel="stylesheet" type="text/css">
+<link href="Sinema.css" rel="stylesheet" type="text/css">
 <link rel="SHORTCUT ICON" type="image/x-icon" href="images/Sinema.ico" />
 </head>
 
