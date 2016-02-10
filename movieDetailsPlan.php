@@ -202,7 +202,7 @@ include ("/home3/tariqaziz/private/connectServer.php");
 					$fileSearch = $title . ".image.url";
 					$similarImgSource = $ini_array["$fileSearch"];
 
-					echo "<div> <a href='movieDetailsPlan.php?movie=".$title."'> 
+					echo "<div> <a href='movieDetails.php?movie=".$title."'> 
 							<img class='similarImage' src='$similarImgSource' alt='sorry'> </a> </div>";
 
 				}
